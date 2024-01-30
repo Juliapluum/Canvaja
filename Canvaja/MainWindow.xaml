@@ -1,0 +1,62 @@
+﻿<Window x:Class="Canvaja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Canvaja"
+        mc:Ignorable="d"
+        Title="canva, Julia Zapora" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="ObszarRoboczy" MouseMove="ObszarRoboczy_MouseMove" MouseDown="ObszarRoboczy_MouseDown" Margin="0,0,0,0" MouseLeftButtonDown="ObszarRoboczy_MouseLeftButtonDown">
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="0"></SolidColorBrush>
+            </Canvas.Background>
+        </Canvas>
+
+        <ToolBarPanel Margin="0,-1,0,0">
+            <ToolBar VerticalAlignment="Top">
+                <Button x:Name="btnAbout" Content="O aplikacji" Click="Przycisk_Click" />
+                <Button x:Name="btnDraw" Content="Dowolnie" Click="btnDraw_Click" />
+                <Button x:Name="btnDrawPoints" Content="Punkty" Click="btnDrawPoints_Click" />
+                <Menu>
+                    <MenuItem Header="Odcinki">
+                        <MenuItem x:Name="btnDrawSegment" Header="Rysuj odcinek" Click="btnDrawSegment_Click"></MenuItem>
+                        <MenuItem x:Name="btnEditSegment" Header="Edytuj odcinek" Click="btnEditSegment_Click"></MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <MenuItem Header="Kształty">
+                        <MenuItem x:Name="btnDrawPolygon" Header="Wielokąt" Click="btnDrawPolygon_Click" />
+                        <MenuItem x:Name="btnDrawCircle" Header="Koło" Click="btnDrawCircle_Click" />
+                        <MenuItem x:Name="btnDrawRectangle" Header="Prostokąt" Click="btnDrawRectangle_Click" />
+                        <MenuItem x:Name="btnDrawCurve" Header="Krzywa" Click="btnDrawCurve_Click" />
+                        <MenuItem x:Name="btnDrawChristmasTree" Header="Choinka" Click="btnDrawChristmasTree_Click" />
+                        <MenuItem x:Name="btnDrawTriangle" Header="Trójkąt" Click="btnDrawTriangle_Click" />
+                        <MenuItem x:Name="btnDrawArrow" Header="Strzałka" Click="btnDrawArrow_Click" />
+                    </MenuItem>
+
+                </Menu>
+                <Menu>
+                    <MenuItem Header="plik">
+                        <MenuItem Header ="Zapisz" x:Name="zapisz" Click="zapisz_Click"/>
+
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <MenuItem Header="zdjęcia">
+                        <MenuItem Header="filtr" x:Name="btnzdjecie" Click="btnzdjecie_Click"/>
+                        <MenuItem Header="wczytaj" x:Name="UploadPicture" Click="UploadPicture_Click" />
+                        <MenuItem Header="emgu" x:Name="sobel" Click="sobel_Click" />
+                    </MenuItem>
+                </Menu>
+                <Menu >
+                    <Button Content="Gumka" x:Name="eraseBtn" Click="Button_Click"></Button>
+                </Menu>
+
+                <Rectangle  Height="20" Width="20" Margin="2" x:Name="colorPick" Fill="Red" MouseLeftButtonDown="colorPick_MouseLeftButtonDown"  >
+                </Rectangle>
+            </ToolBar>
+        </ToolBarPanel>
+
+    </Grid>
+</Window>

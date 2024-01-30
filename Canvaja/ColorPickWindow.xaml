@@ -1,0 +1,52 @@
+﻿<Window x:Class="Canvaja.ColorPickWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Canvaja"
+        mc:Ignorable="d"
+        Title="ColorPickWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10,10,5,10">
+            <TextBlock Text="Enter RGB values (0-255):" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Red:" Margin="0,0,10,0"/>
+                <TextBox x:Name="RedTextBox" Width="30"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Green:" Margin="0,0,10,0"/>
+                <TextBox x:Name="GreenTextBox" Width="30"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Blue:" Margin="0,0,10,0"/>
+                <TextBox x:Name="BlueTextBox" Width="30"/>
+            </StackPanel>
+
+            <Button Content="Convert to HSV" Click="ConvertButton_Click" Margin="0,0,0,10"/>
+
+            <TextBlock Text="HSV values:" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Hue:" Margin="0,0,10,0"/>
+                <TextBox x:Name="HueTextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Saturation:" Margin="0,0,10,0"/>
+                <TextBox x:Name="SaturationTextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Value:" Margin="0,0,10,0"/>
+                <TextBox x:Name="ValueTextBox" IsReadOnly="True"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
